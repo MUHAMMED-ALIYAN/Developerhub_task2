@@ -34,7 +34,7 @@ class _CounterScreenState extends State<CounterScreen> {
     _loadCounter();
   }
 
-  // Load counter value from SharedPreferences
+ 
   Future<void> _loadCounter() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -42,7 +42,7 @@ class _CounterScreenState extends State<CounterScreen> {
     });
   }
 
-  // Save counter value
+
   Future<void> _saveCounter() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('counter', _counter);
